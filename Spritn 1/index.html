@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermanos Jota | Muebles artesanales en madera</title>
+  <meta name="description" content="Hermanos Jota — muebles artesanales en madera para sala, dormitorio y escritorio, fabricados con materiales sustentables.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href=".ass">
+  <meta name="theme-color" content="#2E2015">
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Hermanos Jota">
+  <meta property="og:title" content="Hermanos Jota | Muebles artesanales en madera">
+  <meta property="og:description" content="Muebles artesanales en madera para sala, dormitorio y escritorio, fabricados con materiales sustentables.">
+  <meta property="og:image" content="https://www.hermanosjota.com.ar/assets/images/og-cover.jpg">
+  <meta property="og:url" content="https://www.hermanosjota.com.ar/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (isotipo real de marca) -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Conexión temprana a Google Fonts: reduce la latencia de la primera
+       descarga de tipografía (optimización de performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Styles -->
+
+  <link rel="canonical" href="https://www.hermanosjota.com.ar/">
+
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header__logo">
+      <a href="index.html" class="header__logo-link">
+        <img
+          src="assets/images/isotipo.png"
+          alt=""
+          width="34"
+          height="41"
+        >
+        <span class="header__wordmark">Hermanos Jota</span>
+      </a>
+    </div>
+
+    <nav class="header__nav">
+      <button
+        class="nav__toggle"
+        type="button"
+      >
+        <span>☰</span>
+      </button>
+
+      <ul id="primary-menu" class="nav__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="index.html#historia">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <form class="header__search" role="search" action="productos.html" method="get">
+      <label for="search-input" class="visually-hidden">Buscar productos</label>
+      <input
+        type="search"
+        id="search-input"
+        name="q"
+        placeholder="Buscar muebles..."
+        autocomplete="off"
+      >
+      <button type="submit">
+        <img src="assets/icons/search.svg" alt="" width="20" height="20">
+      </button>
+    </form>
+
+    <div class="header__actions">
+      <a href="cuenta.html" class="header__icon-link">
+        <img src="assets/icons/user.svg" alt="" width="24" height="24">
+      </a>
+
+      <a href="carrito.html" class="header__icon-link header__cart">
+        <img src="assets/icons/cart.svg" alt="" width="24" height="24">
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <div id="live-region" class="visually-hidden" role="status"></div>
+
+  <main id="main-content">
+
+    <section class="hero">
+      <div class="hero__content">
+        <h1 id="hero-title">Muebles con historia, hechos para durar</h1>
+        <p class="hero__subtitle">
+          Diseño artesanal en madera maciza, pensado para acompañar tu casa
+          por generaciones.
+        </p>
+        <a href="productos.html" class="btn btn--primary hero__cta">
+          Ver colección
+        </a>
+      </div>
+
+      <div class="hero__media">
+        <div class="hero__carousel" id="hero-carousel">
+          <!-- Los slides se generan dinámicamente en hero-carousel.js -->
+          <div class="hero__carousel-loading"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="historia">
+      <div class="historia__content">
+        <h2 id="historia-title">Nuestra historia</h2>
+        <p>
+          Hermanos Jota nació en un pequeño taller de carpintería familiar,
+          donde dos hermanos aprendieron el oficio de la madera de manos de
+          su padre. Lo que empezó como encargos para vecinos se convirtió,
+          con los años, en una marca reconocida por su calidad artesanal.
+        </p>
+        <p>
+          Hoy seguimos trabajando cada pieza a mano, combinando técnicas
+          tradicionales de carpintería con diseño contemporáneo, para que
+          cada mueble cuente una historia propia dentro de tu hogar.
+        </p>
+      </div>
+
+      <figure class="historia__media">
+        <img
+          src="./assets/images/relacionadas/nuestra_historia.png"
+          alt="Carpintero trabajando la madera con herramientas manuales en un taller"
+          width="1200"
+          height="900"
+          loading="lazy"
+        >
+      </figure>
+    </section>
+
+    <section class="productos-destacados">
+      <h2 id="productos-destacados-title">Productos destacados</h2>
+
+      <ul class="productos-destacados__grid" id="productos-destacados-grid">
+        <li class="skeleton-card" ><img src="./assets/images/productos/aparador-uspallata.webp" alt="aparador-uspallata"></li>
+        <li class="skeleton-card" ><img src="./assets/images/productos/biblioteca-recoleta.webp" alt="butaca-mendoza"></li>
+        <li class="skeleton-card" ><img src="./assets/images/productos/butaca-mendoza.webp" alt="butaca-mendoza"></li>
+        <li class="skeleton-card" ><img src="./assets/images/productos/escritorio-costa.webp" alt="escritorio-costa"></li>
+      </ul>
+
+      <a href="productos.html" class="btn btn--primary productos-destacados__ver-todo">
+        Ver todos los productos
+      </a>
+    </section>
+
+    <section class="beneficios">
+      <h2 id="beneficios-title">Por qué elegirnos</h2>
+
+      <ul class="beneficios__grid">
+        <li class="beneficio-card">
+          <img
+            src="assets/icons/envio.svg"
+            alt=""
+            width="40"
+            height="40"
+          >
+          <h3>Envío a todo el país</h3>
+          <p>Coordinamos la entrega hasta la puerta de tu casa, con seguimiento del pedido.</p>
+        </li>
+
+        <li class="beneficio-card">
+          <img
+            src="assets/icons/garantia.svg"
+            alt=""
+            width="40"
+            height="40"
+          >
+          <h3>Garantía de 2 años</h3>
+          <p>Cada mueble cubre defectos de fabricación durante 24 meses desde la compra.</p>
+        </li>
+
+        <li class="beneficio-card">
+          <img
+            src="assets/icons/pago-seguro.svg"
+            alt=""
+            width="40"
+            height="40"
+          >
+          <h3>Pago 100% seguro</h3>
+          <p>Tarjetas, transferencia o cuotas, con la protección de nuestra pasarela de pagos.</p>
+        </li>
+
+        <li class="beneficio-card">
+          <img
+            src="assets/icons/artesanal.svg"
+            alt=""
+            width="40"
+            height="40"
+          >
+          <h3>Fabricación artesanal</h3>
+          <p>Cada pieza se trabaja a mano en nuestro taller, sin producción en serie.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="materiales">
+      <div class="materiales__intro">
+        <h2 id="materiales-title">Materiales sustentables</h2>
+        <p>
+          Nuestro compromiso con el medio ambiente guía cada decisión de
+          abastecimiento: madera certificada, acabados naturales y un
+          programa propio para que cada pieza tenga una segunda vida.
+        </p>
+      </div>
+
+      <ul class="materiales__grid">
+        <li class="material-card">
+          <figure>
+            <img
+              src="./assets/images/relacionadas/madera_sustentable.jfif"
+              alt="Troncos de madera apilados en un aserradero"
+              width="500"
+              height="500"
+              loading="lazy"
+            >
+          </figure>
+          <h3>Madera certificada FSC</h3>
+          <p>
+            De bosques argentinos manejados de forma responsable, con
+            prioridad a maderas nativas: algarrobo, quebracho y caldén.
+          </p>
+        </li>
+
+        <li class="material-card">
+          <figure>
+            <img
+              src="./assets/images/relacionadas/FSC.png"
+              alt="Barniz natural aplicado a mano sobre una superficie de madera"
+              width="500"
+              height="500"
+              loading="lazy"
+            >
+          </figure>
+          <h3>Acabados naturales</h3>
+          <p>
+            Aceite de lino prensado en frío, cera de abejas y tintes
+            vegetales de base agua, siempre de bajo COV.
+          </p>
+        </li>
+
+        <li class="material-card">
+          <figure>
+            <img
+              src="./assets/images/relacionadas/acabados_naturales.jfif"
+              alt="Mueble de madera restaurado a mano en un taller de carpintería"
+              width="500"
+              height="500"
+              loading="lazy"
+            >
+          </figure>
+          <h3>Programa Herencia Viva</h3>
+          <p>
+            Garantía extendida (10 años en estructura, 5 en acabados),
+            servicio de restauración y recompra de hasta el 40% del valor.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="opiniones">
+      <h2 id="opiniones-title">Lo que dicen nuestros clientes</h2>
+
+      <ul class="opiniones__grid">
+        <li>
+          <figure class="opinion-card">
+            <blockquote>
+              <p>
+                Compré un sillón hace más de un año y la calidad se nota
+                cada día. Superó mis expectativas por completo.
+              </p>
+            </blockquote>
+            <figcaption>
+              <img
+                src="./assets/images/productos/sofa-patagonia.webp"
+                alt=""
+                width="40"
+                height="40"
+              >
+              <span class="opinion-card__nombre">Marina Sosa</span>
+              <span class="opinion-card__rating">★★★★★</span>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li>
+          <figure class="opinion-card">
+            <blockquote>
+              <p>
+                El escritorio llegó perfecto, bien embalado, y el proceso
+                de compra fue muy simple. Totalmente recomendable.
+              </p>
+            </blockquote>
+            <figcaption>
+              <img
+                src="https://picsum.photos/id/91/80/80"
+                alt=""
+                width="40"
+                height="40"
+              >
+              <span class="opinion-card__nombre">Julián Ferreyra</span>
+              <span class="opinion-card__rating">★★★★★</span>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li>
+          <figure class="opinion-card">
+            <blockquote>
+              <p>
+                Se nota el trabajo artesanal en cada detalle. La atención
+                también fue excelente de principio a fin.
+              </p>
+            </blockquote>
+            <figcaption>
+              <img
+                src="https://picsum.photos/id/65/80/80"
+                alt=""
+                width="40"
+                height="40"
+              >
+              <span class="opinion-card__nombre">Carla Domínguez</span>
+              <span class="opinion-card__rating">★★★★☆</span>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter__content">
+        <h2 id="newsletter-title">Sumate a nuestra comunidad</h2>
+        <p>
+          Recibí novedades, lanzamientos y descuentos exclusivos directo
+          en tu correo. Sin spam, podés darte de baja cuando quieras.
+        </p>
+
+        <form class="newsletter__form" novalidate>
+          <div class="newsletter__field">
+            <label for="newsletter-email">Correo electrónico</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="email"
+              placeholder="tu@email.com"
+              autocomplete="email"
+              required
+            >
+            <p id="newsletter-hint" class="newsletter__hint">
+              Usamos tu correo únicamente para enviarte novedades de Hermanos Jota.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn--primary">
+            Suscribirme
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    Footer del sitio: se desarrollará en el Módulo 9
+  -->
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <div class="site-footer__logo">
+          <img
+            src="assets/images/isotipo.png"
+            alt=""
+            width="28"
+            height="34"
+          >
+          <span class="header__wordmark">Hermanos Jota</span>
+        </div>
+        <p>
+          Muebles artesanales en madera, fabricados a mano en nuestro
+          taller desde hace más de 20 años.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav">
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="index.html#historia">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__legal">
+        <h2>Información legal</h2>
+        <ul>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="cambios-devoluciones.html">Cambios y devoluciones</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__contacto">
+        <h2>Contacto</h2>
+        <address>
+          <p>
+            <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a>
+          </p>
+          <p>
+            <a href="https://wa.me/5491145678900">+54 11 4567-8900</a>
+          </p>
+          <p>
+            Av. San Juan 2847, C1232AAB<br>
+            Barrio de San Cristóbal, CABA, Argentina
+          </p>
+          <p class="site-footer__horarios">
+            Lun. a Vie. 10:00–19:00 · Sáb. 10:00–14:00
+          </p>
+        </address>
+
+        <ul class="site-footer__social">
+          <li>
+            <a href="https://instagram.com/hermanosjota_ba" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/instagram.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5491145678900" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/whatsapp.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
