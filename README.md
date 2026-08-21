@@ -1,8 +1,8 @@
-# 🪑 E-commerce Mueblería Hermanos Jota
+# 🪑 E-commerce Mueblería Hermanos Jota — Sprint 1
 
-Proyecto final — Sprint 1 y 2 — Full Stack Developer, ITBA Educación Ejecutiva.
+Proyecto final — Sprint 1 — Full Stack Developer, ITBA Educación Ejecutiva.
 
-Sitio de e-commerce para una mueblería artesanal, construido únicamente con tecnologías del lado del cliente (**HTML, CSS y JavaScript**). Simula una experiencia de compra completa sin backend: los productos se gestionan localmente mediante un array de objetos en JavaScript.
+Sitio de e-commerce para una mueblería artesanal, construido únicamente con tecnologías del lado del cliente (**HTML y CSS**). En este Sprint se desarrolla la estructura y el diseño visual estático del sitio.
 
 ---
 
@@ -14,49 +14,42 @@ Sitio de e-commerce para una mueblería artesanal, construido únicamente con te
 | Sacca Jurado Maximo Julian | [@maximosacca](https://github.com/maximosacca) |
 | Martin de Achaval | [@martindeachaval](https://github.com/martindeachaval) |
 | Nombre Apellido | [@usuario](https://github.com/usuario) |
-| Nombre Apellido | [@usuario](https://github.com/usuario) |    
+| Nombre Apellido | [@usuario](https://github.com/usuario) |
 
 ---
 
 ## 📋 Resumen del proyecto
 
-Construir la fachada completa y la experiencia interactiva del cliente utilizando únicamente tecnologías del lado del cliente. El sitio es visualmente atractivo, 100% responsivo y simula una experiencia de compra sin conexión a backend.
+Construir la fachada completa del sitio utilizando tecnologías del lado del cliente. El sitio es visualmente atractivo y 100% responsivo, sentando la base estructural y de estilos sobre la que luego se agregará la interactividad en el Sprint 2.
 
 ## 🎯 Objetivos de aprendizaje
 
-1. Estructurar un sitio web complejo utilizando HTML5 semántico.
-2. Aplicar estilos y diseño responsivo con CSS3, dominando el Modelo de Cajas y Flexbox.
-3. Implementar lógica de programación con JavaScript para crear una experiencia de usuario dinámica.
-4. Manipular el DOM para crear y modificar contenido.
-5. Gestionar colecciones de datos utilizando Arrays de Objetos.
-6. Simular una petición de datos asíncrona para cargar el catálogo.
-7. Manejar la interacción del usuario a través de eventos.
-8. Colaborar en un proyecto utilizando Git y GitHub.
+A lo largo de este Sprint:
+
+1. Conocerán qué es la World Wide Web y cómo funciona.
+2. Analizarán el modelo cliente-servidor y los roles de cada uno.
+3. Conocerán los roles de HTML y CSS en la creación de páginas web.
+4. Crearán páginas web estáticas básicas utilizando HTML para la estructura y CSS para el estilo.
 
 ## ⚙️ Funcionalidades
 
 ### 🏠 Página de Inicio — `index.html`
 - Header con logo y navegación
 - Hero banner principal
-- 3–4 productos destacados cargados dinámicamente
+- 3–4 productos destacados (estáticos)
 - Footer con información básica
 
 ### 🛋️ Catálogo de Productos — `productos.html`
-- Grilla de tarjetas de productos
-- Datos cargados desde archivo JavaScript local
+- Grilla de tarjetas de productos (contenido estático)
 - Cada producto enlaza a su página de detalle
-- Campo de búsqueda (bonus funcional)
 
 ### 🔍 Detalle de Producto — `producto.html`
 - Imagen grande y descripción completa
 - Detalles de fabricación y precio
-- Botón "Añadir al Carrito"
+- Botón "Añadir al Carrito" (sin funcionalidad todavía)
 
 ### ✉️ Contacto — `contacto.html`
-- Formulario: Nombre, Email, Mensaje
-- Validación del lado del cliente con JS
-- Mensaje de éxito mediante manipulación del DOM
-- Carrito simulado con contador en el header
+- Formulario: Nombre, Email, Mensaje (sin validación todavía)
 
 ## 🛠️ Stack técnico
 
@@ -64,6 +57,5 @@ Construir la fachada completa y la experiencia interactiva del cliente utilizand
 |---|---|
 | **HTML** | Etiquetas semánticas obligatorias · código limpio y bien indentado |
 | **CSS** | 100% responsivo (Mobile First) · Flexbox para secciones principales · todo en archivo externo |
-| **JavaScript** | Productos en array de objetos (`.js`) · renderizado dinámico vía DOM · carga asíncrona (`setTimeout` / `async-await`) · interactividad con `addEventListener` |
 
 ## 📁 Estructura del proyecto
