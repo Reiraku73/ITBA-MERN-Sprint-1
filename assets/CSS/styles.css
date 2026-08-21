@@ -339,8 +339,9 @@ main > section {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  
 }
-.historia__media { order: -1; }
+.historia__media { order: -1;}
 .historia__content p + p { margin-top: var(--space-2); }
 .historia__content { color: var(--color-ink-soft); }
 .historia__content h2 { color: var(--color-ink); margin-bottom: var(--space-2); }
@@ -427,6 +428,7 @@ main > section {
 .materiales { background: var(--color-bg-alt); max-width: none; }
 .materiales__intro { max-width: var(--container); margin: 0 auto var(--space-4); }
 .materiales__intro p { color: var(--color-ink-soft); max-width: 60ch; margin-top: var(--space-1); }
+
 .materiales__grid {
   max-width: var(--container);
   margin: 0 auto;
@@ -440,6 +442,16 @@ main > section {
   border-radius: var(--radius);
   overflow: hidden;
   border-top: 3px solid var(--color-salvia);
+}
+.material-card figure {
+  margin: 0;
+}
+.material-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .material-card h3 { padding: var(--space-2) var(--space-2) 0; font-size: 1.05rem; }
 .material-card p { padding: 0.35rem var(--space-2) var(--space-2); color: var(--color-ink-soft); font-size: 0.92rem; }
@@ -515,6 +527,19 @@ main > section {
   margin-top: 0.4rem;
 }
 .newsletter__form .btn { width: 100%; }
+
+/* ---------- Páginas en Construcción ---------- */
+.pagina-en-construccion {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-3);
+  text-align: center;
+}
+
+.pagina-en-construccion p {
+  color: var(--color-ink-soft);
+  margin: var(--space-2) 0 var(--space-3);
+}
 
 /* ==========================================================================
    Footer
