@@ -21,6 +21,7 @@
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
 
@@ -83,43 +84,180 @@
       </a>
     </div>
   </header>
-
+  
   <main id="main-content">
-    <section class="productos-listado" aria-labelledby="productos-listado-title">
+    <section class="productos-listado">
       <h1 id="productos-listado-title">Catálogo completo</h1>
       <p class="productos-listado__intro">
         Once piezas, cada una fabricada a mano en nuestro taller. Elegí una
         para ver medidas, materiales y acabados en detalle.
       </p>
 
-      <ul class="productos-listado__grid" aria-live="polite">
-        <li class="producto-card">
-          <a href="producto.html">
-            <img src="assets/images/productos/mesa-atelier.jpg" alt="Mesa Atelier" width="400" height="400">
-            <h2>Mesa Atelier</h2>
-            <p>USD 1.250</p>
-          </a>
+      <ul class="productos-listado__grid" id="productos-listado-grid" aria-live="polite">
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=1" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/aparador-uspallata.webp" alt="Aparador Uspallata, comedor" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Comedor</p>
+                <h3>Aparador Uspallata</h3>
+                <p class="producto-card__price">$485.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="1" aria-label="Agregar Aparador Uspallata al carrito">Agregar al carrito</button>
+          </article>
         </li>
-        <li class="producto-card">
-          <a href="producto.html">
-            <img src="assets/images/productos/silla-ena.jpg" alt="Silla Ena" width="400" height="400">
-            <h2>Silla Ena</h2>
-            <p>USD 420</p>
-          </a>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=2" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/biblioteca-recoleta.webp" alt="Biblioteca Recoleta, living" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Living</p>
+                <h3>Biblioteca Recoleta</h3>
+                <p class="producto-card__price">$620.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="2" aria-label="Agregar Biblioteca Recoleta al carrito">Agregar al carrito</button>
+          </article>
         </li>
-        <li class="producto-card">
-          <a href="producto.html">
-            <img src="assets/images/productos/escritorio-vitra.jpg" alt="Escritorio Vitra" width="400" height="400">
-            <h2>Escritorio Vitra</h2>
-            <p>USD 980</p>
-          </a>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=3" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/butaca-mendoza.webp" alt="Butaca Mendoza, living" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Living</p>
+                <h3>Butaca Mendoza</h3>
+                <p class="producto-card__price">$315.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="3" aria-label="Agregar Butaca Mendoza al carrito">Agregar al carrito</button>
+          </article>
         </li>
-        <li class="producto-card">
-          <a href="producto.html">
-            <img src="assets/images/productos/estanteria-tallada.jpg" alt="Estantería Tallada" width="400" height="400">
-            <h2>Estantería Tallada</h2>
-            <p>USD 1.100</p>
-          </a>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=4" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/escritorio-costa.webp" alt="Escritorio Costa, oficina" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Oficina</p>
+                <h3>Escritorio Costa</h3>
+                <p class="producto-card__price">$540.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="4" aria-label="Agregar Escritorio Costa al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=5" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/mesa-comedor-pampa.webp" alt="Mesa de comedor Pampa, comedor" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Comedor</p>
+                <h3>Mesa de comedor Pampa</h3>
+                <p class="producto-card__price">$780.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="5" aria-label="Agregar Mesa de comedor Pampa al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=6" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/mesa-de-centro-araucaria.webp" alt="Mesa de centro Araucaria, living" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Living</p>
+                <h3>Mesa de centro Araucaria</h3>
+                <p class="producto-card__price">$295.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="6" aria-label="Agregar Mesa de centro Araucaria al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=7" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/mesa-de-noche-aconcagua.webp" alt="Mesa de noche Aconcagua, dormitorio" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Dormitorio</p>
+                <h3>Mesa de noche Aconcagua</h3>
+                <p class="producto-card__price">$185.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="7" aria-label="Agregar Mesa de noche Aconcagua al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=8" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/silla-de-trabajo-belgrano.webp" alt="Silla de trabajo Belgrano, oficina" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Oficina</p>
+                <h3>Silla de trabajo Belgrano</h3>
+                <p class="producto-card__price">$265.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="8" aria-label="Agregar Silla de trabajo Belgrano al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=9" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/sillas-cordoba.webp" alt="Sillas Córdoba, comedor" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Comedor</p>
+                <h3>Sillas Córdoba</h3>
+                <p class="producto-card__price">$220.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="9" aria-label="Agregar Sillas Córdoba al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=10" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/sillon-copacabana.webp" alt="Sillón Copacabana, living" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Living</p>
+                <h3>Sillón Copacabana</h3>
+                <p class="producto-card__price">$595.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="10" aria-label="Agregar Sillón Copacabana al carrito">Agregar al carrito</button>
+          </article>
+        </li>
+        <li>
+          <article class="producto-card">
+            <a href="producto.html?id=11" class="producto-card__link">
+              <figure class="producto-card__media">
+                <img src="assets/images/productos/sofa-patagonia.webp" alt="Sofá Patagonia, living" width="600" height="600" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <p class="producto-card__categoria">Living</p>
+                <h3>Sofá Patagonia</h3>
+                <p class="producto-card__price">$890.000</p>
+              </div>
+            </a>
+            <button type="button" class="btn btn--secondary producto-card__cta" data-id="11" aria-label="Agregar Sofá Patagonia al carrito">Agregar al carrito</button>
+          </article>
         </li>
       </ul>
     </section>
