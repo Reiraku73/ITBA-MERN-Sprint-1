@@ -13,7 +13,7 @@ Sitio de e-commerce para una mueblería artesanal, construido únicamente con te
 | Orodaz Mateo | [@Reiraku73](https://github.com/Reiraku73) |
 | Sacca Jurado Maximo Julian | [@maximosacca](https://github.com/maximosacca) |
 | Martin de Achaval | [@martindeachaval](https://github.com/martindeachaval) |
-| Nombre Apellido | [@usuario](https://github.com/usuario) |
+| Tomás Zambrano | [@tommyrk](https://github.com/tommyrk) |
 | Nombre Apellido | [@usuario](https://github.com/usuario) |
 
 ---
