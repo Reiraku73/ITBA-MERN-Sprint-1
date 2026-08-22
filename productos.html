@@ -29,7 +29,7 @@
 
   <header class="site-header">
     <div class="header__logo">
-      <a href="index.html" class="header__logo-link" aria-label="Hermanos Jota - Ir al inicio">
+      <a href="index.html" class="header__logo-link">
         <img
           src="assets/images/isotipo.png"
           alt=""
@@ -40,20 +40,10 @@
       </a>
     </div>
 
-    <nav class="header__nav" aria-label="Navegación principal">
-      <button
-        class="nav__toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-menu"
-        aria-label="Abrir menú de navegación"
-      >
-        <span aria-hidden="true">☰</span>
-      </button>
-
-      <ul id="primary-menu" class="nav__list">
+    <nav class="header__nav">
+      <ul class="nav__list">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="productos.html">Productos</a></li>
         <li><a href="index.html#historia">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -68,35 +58,39 @@
         placeholder="Buscar muebles..."
         autocomplete="off"
       >
-      <button type="submit" aria-label="Buscar">
+      <button type="submit">
         <img src="assets/icons/search.svg" alt="" width="20" height="20">
       </button>
     </form>
 
     <div class="header__actions">
-      <a href="cuenta.html" class="header__icon-link" aria-label="Mi cuenta">
+      <a href="menu.html" class="nav__toggle">
+        <span>☰</span>
+      </a>
+
+      <a href="cuenta.html" class="header__icon-link">
         <img src="assets/icons/user.svg" alt="" width="24" height="24">
       </a>
 
-      <a href="carrito.html" class="header__icon-link header__cart" aria-label="Carrito de compras, 0 productos">
+      <a href="carrito.html" class="header__icon-link header__cart">
         <img src="assets/icons/cart.svg" alt="" width="24" height="24">
-        <span class="cart-count" aria-hidden="true">0</span>
+        <span class="cart-count">0</span>
       </a>
     </div>
   </header>
   
   <main id="main-content">
     <section class="productos-listado">
-      <h1 id="productos-listado-title">Catálogo completo</h1>
+      <h1 class="productos-listado__title">Catálogo completo</h1>
       <p class="productos-listado__intro">
         Once piezas, cada una fabricada a mano en nuestro taller. Elegí una
         para ver medidas, materiales y acabados en detalle.
       </p>
 
-      <ul class="productos-listado__grid" id="productos-listado-grid" aria-live="polite">
+      <ul class="productos-listado__grid">
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=1" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/aparador-uspallata.webp" alt="Aparador Uspallata, comedor" width="600" height="600" loading="lazy">
               </figure>
@@ -106,12 +100,12 @@
                 <p class="producto-card__price">$485.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="1" aria-label="Agregar Aparador Uspallata al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=2" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/biblioteca-recoleta.webp" alt="Biblioteca Recoleta, living" width="600" height="600" loading="lazy">
               </figure>
@@ -121,12 +115,12 @@
                 <p class="producto-card__price">$620.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="2" aria-label="Agregar Biblioteca Recoleta al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=3" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/butaca-mendoza.webp" alt="Butaca Mendoza, living" width="600" height="600" loading="lazy">
               </figure>
@@ -136,12 +130,12 @@
                 <p class="producto-card__price">$315.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="3" aria-label="Agregar Butaca Mendoza al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=4" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/escritorio-costa.webp" alt="Escritorio Costa, oficina" width="600" height="600" loading="lazy">
               </figure>
@@ -151,12 +145,12 @@
                 <p class="producto-card__price">$540.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="4" aria-label="Agregar Escritorio Costa al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=5" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/mesa-comedor-pampa.webp" alt="Mesa de comedor Pampa, comedor" width="600" height="600" loading="lazy">
               </figure>
@@ -166,12 +160,12 @@
                 <p class="producto-card__price">$780.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="5" aria-label="Agregar Mesa de comedor Pampa al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=6" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/mesa-de-centro-araucaria.webp" alt="Mesa de centro Araucaria, living" width="600" height="600" loading="lazy">
               </figure>
@@ -181,12 +175,12 @@
                 <p class="producto-card__price">$295.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="6" aria-label="Agregar Mesa de centro Araucaria al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=7" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/mesa-de-noche-aconcagua.webp" alt="Mesa de noche Aconcagua, dormitorio" width="600" height="600" loading="lazy">
               </figure>
@@ -196,12 +190,12 @@
                 <p class="producto-card__price">$185.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="7" aria-label="Agregar Mesa de noche Aconcagua al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=8" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/silla-de-trabajo-belgrano.webp" alt="Silla de trabajo Belgrano, oficina" width="600" height="600" loading="lazy">
               </figure>
@@ -211,12 +205,12 @@
                 <p class="producto-card__price">$265.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="8" aria-label="Agregar Silla de trabajo Belgrano al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=9" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/sillas-cordoba.webp" alt="Sillas Córdoba, comedor" width="600" height="600" loading="lazy">
               </figure>
@@ -226,12 +220,12 @@
                 <p class="producto-card__price">$220.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="9" aria-label="Agregar Sillas Córdoba al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=10" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/sillon-copacabana.webp" alt="Sillón Copacabana, living" width="600" height="600" loading="lazy">
               </figure>
@@ -241,12 +235,12 @@
                 <p class="producto-card__price">$595.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="10" aria-label="Agregar Sillón Copacabana al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
         <li>
           <article class="producto-card">
-            <a href="producto.html?id=11" class="producto-card__link">
+            <a href="producto.html" class="producto-card__link">
               <figure class="producto-card__media">
                 <img src="assets/images/productos/sofa-patagonia.webp" alt="Sofá Patagonia, living" width="600" height="600" loading="lazy">
               </figure>
@@ -256,7 +250,7 @@
                 <p class="producto-card__price">$890.000</p>
               </div>
             </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" data-id="11" aria-label="Agregar Sofá Patagonia al carrito">Agregar al carrito</button>
+            <a href="carrito.html" class="btn btn--secondary producto-card__cta">Agregar al carrito</a>
           </article>
         </li>
       </ul>
@@ -282,7 +276,7 @@
         </p>
       </div>
 
-      <nav class="site-footer__nav" aria-label="Navegación del pie de página">
+      <nav class="site-footer__nav">
         <h2>Navegación</h2>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -319,14 +313,14 @@
           </p>
         </address>
 
-        <ul class="site-footer__social" aria-label="Redes sociales">
+        <ul class="site-footer__social">
           <li>
-            <a href="https://instagram.com/hermanosjota_ba" aria-label="Instagram de Hermanos Jota" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/hermanosjota_ba" target="_blank" rel="noopener noreferrer">
               <img src="assets/icons/instagram.svg" alt="" width="24" height="24">
             </a>
           </li>
           <li>
-            <a href="https://wa.me/5491145678900" aria-label="WhatsApp de Hermanos Jota" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5491145678900" target="_blank" rel="noopener noreferrer">
               <img src="assets/icons/whatsapp.svg" alt="" width="24" height="24">
             </a>
           </li>
@@ -336,7 +330,7 @@
     </div>
 
     <div class="site-footer__bottom">
-      <p>&copy; 2026 Hermanos Jota. Todos los derechos reservados.</p>
+      <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
