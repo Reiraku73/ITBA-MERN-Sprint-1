@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cuenta | Hermanos Jota</title>
+  <meta name="description" content="Iniciá sesión o creá tu cuenta en Hermanos Jota.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#2E2015">
+  <link rel="icon" type="image/png" href="../../public/images/branding/favicon.png">
+  <link rel="apple-touch-icon" href="../../public/images/branding/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header__logo">
+      <a href="Home.html" class="header__logo-link" aria-label="Hermanos Jota - Ir al inicio">
+        <img
+          src="../../public/images/branding/isotipo.png"
+          alt=""
+          width="34"
+          height="41"
+        >
+        <span class="header__wordmark">Hermanos Jota</span>
+      </a>
+    </div>
+
+    <nav class="header__nav" aria-label="Navegación principal">
+      <!--
+        Botón del menú mobile: el CSS ya lo esconde/muestra según el
+        ancho de pantalla (ver @media en style.css), pero para que
+        realmente abra y cierre la lista de links en mobile hace falta
+        JS que le sume/saque la clase "is-open" a #primary-menu al
+        hacer click. Por ahora, en mobile, el botón se ve pero no hace
+        nada — es lo que sigue en el próximo sprint.
+      -->
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <ul id="primary-menu" class="nav__list">
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Home.html#historia">Nosotros</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      Buscador: por ahora es un formulario HTML normal. Al enviarlo, el
+      navegador navega a productos.html?q=... por su cuenta (comportamiento
+      nativo del form, sin JS). El filtrado real de resultados según ese
+      "q" es lógica de JavaScript que todavía no escribimos.
+    -->
+    <form class="header__search" role="search" action="productos.html" method="get">
+      <label for="search-input" class="visually-hidden">Buscar productos</label>
+      <input
+        type="search"
+        id="search-input"
+        name="q"
+        placeholder="Buscar muebles..."
+        autocomplete="off"
+      >
+      <button type="submit" aria-label="Buscar">
+        <img src="../../public/icons/search.svg" alt="" width="20" height="20">
+      </button>
+    </form>
+
+    <div class="header__actions">
+      <a href="Cuenta.html" class="header__icon-link" aria-label="Mi cuenta">
+        <img src="../../public/icons/user.svg" alt="" width="24" height="24">
+      </a>
+
+      <!--
+        El "0" de acá al lado está escrito fijo en el HTML. Cuando
+        agreguemos el carrito con JS, este número se va a actualizar
+        solo cada vez que se agregue un producto.
+      -->
+      <a href="Carrito.html" class="header__icon-link header__cart" aria-label="Carrito de compras, 0 productos">
+        <img src="../../public/icons/cart.svg" alt="" width="24" height="24">
+        <span class="cart-count" aria-hidden="true">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!--
+    Región para anuncios accesibles (ej. "Producto agregado al carrito").
+    Queda vacía hasta que JS empiece a escribir mensajes acá adentro.
+  -->
+  <div id="live-region" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <main id="main-content">
+    <section class="pagina-en-construccion">
+      <h1>Mi cuenta</h1>
+      <p>El inicio de sesión y el registro de usuarios todavía no están disponibles. Si necesitás ayuda con un pedido, escribinos por WhatsApp desde el pie de página.</p>
+      <a href="Home.html" class="btn btn--primary">Volver al inicio</a>
+    </section>
+  </main>
+
+<footer class="site-footer">
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <div class="site-footer__logo">
+          <img
+            src="../../public/images/branding/isotipo.png"
+            alt=""
+            width="28"
+            height="34"
+          >
+          <span class="header__wordmark">Hermanos Jota</span>
+        </div>
+        <p>
+          Muebles artesanales en madera, fabricados a mano en nuestro
+          taller desde hace más de 20 años.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Navegación del pie de página">
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="Home.html">Inicio</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="Home.html#historia">Nosotros</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__legal">
+        <h2>Información legal</h2>
+        <ul>
+          <li><a href="Terminos.html">Términos y condiciones</a></li>
+          <li><a href="Privacidad.html">Política de privacidad</a></li>
+          <li><a href="CambiosDevoluciones.html">Cambios y devoluciones</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__contacto">
+        <h2>Contacto</h2>
+        <address>
+          <p>
+            <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a>
+          </p>
+          <p>
+            <a href="https://wa.me/5491145678900">+54 11 4567-8900</a>
+          </p>
+          <p>
+            Av. San Juan 2847, C1232AAB<br>
+            Barrio de San Cristóbal, CABA, Argentina
+          </p>
+          <p class="site-footer__horarios">
+            Lun. a Vie. 10:00–19:00 · Sáb. 10:00–14:00
+          </p>
+        </address>
+
+        <ul class="site-footer__social" aria-label="Redes sociales">
+          <li>
+            <a href="https://instagram.com/hermanosjota_ba" aria-label="Instagram de Hermanos Jota" target="_blank" rel="noopener noreferrer">
+              <img src="../../public/icons/instagram.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5491145678900" aria-label="WhatsApp de Hermanos Jota" target="_blank" rel="noopener noreferrer">
+              <img src="../../public/icons/whatsapp.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <!--
+    JavaScript: todavía no está conectado en esta etapa del proyecto.
+    En el próximo sprint se suma acá la lógica de menú mobile, carrito
+    y validación de formularios (ver /assets/js/ en la versión con JS).
+  -->
+</body>
+</html>

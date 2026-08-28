@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /carrito.html
+Disallow: /cuenta.html
+
+Sitemap: https://www.hermanosjota.com.ar/sitemap.xml
