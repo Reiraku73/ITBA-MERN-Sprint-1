@@ -93,15 +93,9 @@
       <a href="cuenta.html" class="header__icon-link" aria-label="Mi cuenta">
         <img src="assets/icons/user.svg" alt="" width="24" height="24">
       </a>
-
-      <!--
-        El "0" de acá al lado está escrito fijo en el HTML. Cuando
-        agreguemos el carrito con JS, este número se va a actualizar
-        solo cada vez que se agregue un producto.
-      -->
       <a href="carrito.html" class="header__icon-link header__cart" aria-label="Carrito de compras, 0 productos">
         <img src="assets/icons/cart.svg" alt="" width="24" height="24">
-        <span class="cart-count" aria-hidden="true">0</span>
+        <span class="cart-count" aria-hidden="true"></span>
       </a>
     </div>
   </header>
@@ -119,14 +113,6 @@
         Once piezas, cada una fabricada a mano en nuestro taller. Elegí una
         para ver medidas, materiales y acabados en detalle.
       </p>
-
-      <!--
-        Las 11 tarjetas están escritas a mano acá abajo. En la versión
-        con JavaScript, este bloque se reemplaza por una lista vacía que
-        se llena dinámicamente recorriendo un array de objetos
-        (ver /assets/js/productos-listado.js y /data/productos.js en
-        esa versión) — pero la estructura de cada tarjeta es la misma.
-      -->
       <ul class="productos-listado__grid">
         
       </ul>
@@ -209,11 +195,5 @@
       <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <!--
-    JavaScript: todavía no está conectado en esta etapa del proyecto.
-    En el próximo sprint se suma acá la lógica de menú mobile, carrito
-    y validación de formularios (ver /assets/js/ en la versión con JS).
-  -->
 </body>
 </html>
