@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cambios y devoluciones | Hermanos Jota</title>
-  <meta name="description" content="Política de cambios y devoluciones de Hermanos Jota.">
+  <title>Términos y condiciones | Hermanos Jota</title>
+  <meta name="description" content="Términos y condiciones de Hermanos Jota.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#2E2015">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
@@ -17,14 +19,24 @@
 
   <header class="site-header">
     <div class="header__logo">
-      <a href="index.html" class="header__logo-link">
+      <a href="index.html" class="header__logo-link" aria-label="Hermanos Jota - Ir al inicio">
         <img src="assets/images/isotipo.png" alt="" width="34" height="41">
         <span class="header__wordmark">Hermanos Jota</span>
       </a>
     </div>
 
-    <nav class="header__nav">
-      <ul class="nav__list">
+    <nav class="header__nav" aria-label="Navegación principal">
+      <button
+        class="nav__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+        aria-label="Abrir menú de navegación"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <ul id="primary-menu" class="nav__list">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="index.html#historia">Nosotros</a></li>
@@ -34,14 +46,8 @@
 
     <form class="header__search" role="search" action="productos.html" method="get">
       <label for="search-input" class="visually-hidden">Buscar productos</label>
-      <input
-        type="search"
-        id="search-input"
-        name="q"
-        placeholder="Buscar muebles..."
-        autocomplete="off"
-      >
-      <button type="submit">
+      <input type="search" id="search-input" name="q" placeholder="Buscar muebles..." autocomplete="off">
+      <button type="submit" aria-label="Buscar">
         <img src="assets/icons/search.svg" alt="" width="20" height="20">
       </button>
     </form>
@@ -50,7 +56,6 @@
       <a href="cuenta.html" class="header__icon-link" aria-label="Mi cuenta">
         <img src="assets/icons/user.svg" alt="" width="24" height="24">
       </a>
-
       <a href="carrito.html" class="header__icon-link header__cart" aria-label="Carrito de compras, 0 productos">
         <img src="assets/icons/cart.svg" alt="" width="24" height="24">
         <span class="cart-count" aria-hidden="true">0</span>
@@ -62,74 +67,95 @@
 
   <main id="main-content">
 
-    <section class="legal-hero" aria-labelledby="cambios-title">
-      <h1 id="cambios-title">Cambios y devoluciones</h1>
+    <section class="legal-hero" aria-labelledby="terminos-title">
+      <h1 id="terminos-title">Términos y condiciones</h1>
       <p>Última actualización: septiembre de 2026</p>
     </section>
 
     <section class="legal-content">
 
       <article>
-        <h2>1. Plazo para solicitar un cambio o devolución</h2>
+        <h2>1. Aceptación de los términos</h2>
         <p>
-          Tenés hasta 10 días corridos desde la recepción del producto para
-          solicitar un cambio o devolución, siempre que se encuentre en su
-          estado original, sin uso, y con su embalaje correspondiente.
+          Al acceder y utilizar el sitio de Hermanos Jota, aceptás los presentes
+          términos y condiciones. Si no estás de acuerdo con alguno de sus puntos,
+          te pedimos que no utilices este sitio ni realices compras a través de él.
         </p>
       </article>
 
       <article>
-        <h2>2. Cómo iniciar el proceso</h2>
+        <h2>2. Productos y precios</h2>
         <p>
-          Escribinos por email o WhatsApp indicando tu número de pedido y el
-          motivo del cambio o devolución. Te vamos a confirmar los pasos a
-          seguir y, si corresponde, coordinar el retiro del producto.
+          Todos nuestros muebles son de fabricación artesanal, por lo que pueden
+          existir pequeñas variaciones de color, veta o terminación respecto a las
+          imágenes publicadas. Los precios están expresados en pesos argentinos e
+          incluyen impuestos vigentes, salvo que se indique lo contrario. Nos
+          reservamos el derecho de modificar precios y disponibilidad sin previo aviso.
         </p>
       </article>
 
       <article>
-        <h2>3. Estado del producto</h2>
+        <h2>3. Envíos</h2>
         <p>
-          El mueble debe devolverse sin señales de uso, rayones ni daños, en
-          su embalaje original. Si el producto presenta desperfectos de
-          fabricación, la devolución no tiene costo; si es por cambio de
-          opinión, el costo del flete de retiro corre por cuenta del cliente.
+          Realizamos envíos a todo el país. Los plazos de entrega son estimados y
+          pueden variar según la localidad y las condiciones logísticas del momento.
+          El costo de envío se calcula al finalizar la compra, según destino y volumen
+          del producto.
         </p>
       </article>
 
       <article>
-        <h2>4. Reintegro del dinero</h2>
+        <h2>4. Garantía</h2>
         <p>
-          Una vez que recibimos e inspeccionamos el producto devuelto,
-          procesamos el reintegro dentro de los 10 días hábiles, utilizando el
-          mismo medio de pago con el que se realizó la compra.
+          Todos los productos cuentan con garantía de 2 años sobre defectos de
+          fabricación, contados desde la fecha de compra. La garantía no cubre
+          desgaste normal por uso, daños ocasionados por mal uso, humedad extrema
+          o exposición directa al sol.
         </p>
       </article>
 
       <article>
-        <h2>5. Programa Herencia Viva</h2>
+        <h2>5. Cambios y devoluciones</h2>
         <p>
-          Todos nuestros productos incluyen el Programa Herencia Viva, con
-          garantía extendida de 10 años en estructura y 5 años en acabados,
-          servicio de restauración y recompra de hasta el 40% del valor
-          original. Podés ver más detalles en la sección de Materiales
-          sustentables del inicio.
+          Podés solicitar un cambio o devolución dentro de los 10 días corridos
+          posteriores a la recepción del producto, siempre que se encuentre en su
+          estado original, sin uso y con su embalaje correspondiente. Para iniciar
+          el proceso, escribinos por email o WhatsApp indicando tu número de pedido.
         </p>
       </article>
 
       <article>
-        <h2>6. Excepciones</h2>
+        <h2>6. Métodos de pago</h2>
         <p>
-          No se aceptan cambios ni devoluciones en productos hechos a medida
-          o personalizados por pedido especial, salvo que presenten defectos
-          de fabricación.
+          Aceptamos tarjetas de crédito y débito, transferencia bancaria y pago en
+          cuotas a través de nuestra pasarela de pagos. Toda la información de pago
+          es procesada de forma segura y encriptada.
         </p>
       </article>
 
       <article>
-        <h2>7. Contacto</h2>
+        <h2>7. Propiedad intelectual</h2>
         <p>
-          Ante cualquier consulta sobre cambios o devoluciones, escribinos a
+          Todo el contenido de este sitio (imágenes, textos, diseños y logotipos)
+          es propiedad de Hermanos Jota y está protegido por las leyes de propiedad
+          intelectual vigentes. Su reproducción total o parcial sin autorización
+          está prohibida.
+        </p>
+      </article>
+
+      <article>
+        <h2>8. Modificaciones</h2>
+        <p>
+          Nos reservamos el derecho de modificar estos términos y condiciones en
+          cualquier momento. Los cambios entrarán en vigencia desde su publicación
+          en este sitio.
+        </p>
+      </article>
+
+      <article>
+        <h2>9. Contacto</h2>
+        <p>
+          Ante cualquier consulta sobre estos términos, podés escribirnos a
           <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a>
           o por WhatsApp al <a href="https://wa.me/5491145678900">+54 11 4567-8900</a>.
         </p>

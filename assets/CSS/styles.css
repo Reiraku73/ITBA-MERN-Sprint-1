@@ -850,6 +850,60 @@ main > section {
 }
 
 /* ==========================================================================
+   Páginas legales (terminos.html, privacidad.html, cambios-devoluciones.html)
+   ========================================================================== */
+.legal-hero {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-2) var(--space-3);
+  text-align: center;
+}
+.legal-hero p {
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  margin-top: var(--space-1);
+}
+
+.legal-content {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 0 var(--space-2) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.legal-content article {
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-3);
+}
+.legal-content h2 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-siena);
+  margin-bottom: var(--space-2);
+}
+.legal-content p {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+}
+.legal-content a {
+  color: var(--color-siena);
+  text-decoration: underline;
+}
+.legal-content a:hover {
+  color: var(--color-siena-dark);
+}
+
+.legal-content__volver {
+  display: block;
+  width: fit-content;
+  margin: 0 auto var(--space-6);
+}
+
+/* ==========================================================================
    Responsive — mobile-first (se agrega complejidad a partir de acá)
    ========================================================================== */
 
@@ -900,6 +954,9 @@ main > section {
   .newsletter__form .btn { width: auto; margin-top: 1.55rem; }
 
   .contacto__form-row { flex-direction: row; }
+
+  .legal-hero,
+  .legal-content { padding-left: var(--space-3); padding-right: var(--space-3); }
 }
 
 /* ---------- Desktop (≥1024px) ----------
