@@ -790,6 +790,76 @@ main > section {
 .contacto__exito p { color: var(--color-ink-soft); margin-bottom: var(--space-3); }
 
 /* ==========================================================================
+   Login y Register
+   ========================================================================== */
+
+.login-container {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-3);
+  text-align: center;
+}
+
+.login-titulo {
+  margin-bottom: var(--space-3);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.login-form label {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin-bottom: -1.25rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--color-siena);
+}
+
+.login-boton {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.login-boton:hover { background: var(--color-siena-dark); }
+.login-boton:active { transform: translateY(1px); }
+
+.login-extra {
+  color: var(--color-ink-soft);
+  margin-top: var(--space-3);
+}
+
+.login-extra a {
+  color: var(--color-siena);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
