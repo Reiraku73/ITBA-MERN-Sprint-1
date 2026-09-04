@@ -84,10 +84,12 @@
         <input type="email" id="email" required>
 
         <label>Teléfono (opcional)</label>
-        <input type="tel" id="phone" pattern="[0-9]{10}">
+        <input type="tel" id="phone" pattern="\+?[-\s\d()]{7,}" title="Ingresá un teléfono válido, con entre 7 y 15 dígitos.">
 
         <label>Contraseña</label>
-        <input type="password" id="password" required>
+        <input type="password" id="password" required minlength="8"
+          pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9\s]).{8,}"
+          title="Usá al menos 8 caracteres, una mayúscula, una minúscula, un número y un símbolo.">
 
         <button type="submit" class="login-boton">
           Crear cuenta
@@ -177,6 +179,7 @@
       <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="assets/js/validaciones.js"></script>
   <script src="assets/js/register.js"></script>
 </body>
 </html>

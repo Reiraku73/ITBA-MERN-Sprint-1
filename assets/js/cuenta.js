@@ -55,6 +55,16 @@ if (!currentUser) {
         currentUser.lastname = fields.lastname.value.trim();
         currentUser.phone = fields.phone.value.trim();
 
+        if (!esEmailValido(currentUser.email)) {
+            alert('El correo electrónico actual no es válido.');
+            return;
+        }
+
+        if (!esTelefonoValido(currentUser.phone)) {
+            alert('Ingresá un teléfono válido, con entre 7 y 15 dígitos.');
+            return;
+        }
+
         const passwordValues = [
             fields.currentPassword.value,
             fields.newPassword.value,
@@ -74,6 +84,11 @@ if (!currentUser) {
 
         if (changingPassword && fields.newPassword.value !== fields.repeatedPassword.value) {
             alert('Las nuevas contraseñas no coinciden.');
+            return;
+        }
+
+        if (changingPassword && !esPasswordValida(fields.newPassword.value)) {
+            alert('La nueva contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un símbolo.');
             return;
         }
 
