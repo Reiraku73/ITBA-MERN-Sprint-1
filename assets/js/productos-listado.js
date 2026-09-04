@@ -3,15 +3,16 @@ import { productos } from '/assets/data/productos.js'
 
 const productosList = document.querySelector('.productos-listado__grid')
 const cartCount = document.querySelector('.cart-count')
-
+const productosH1 = document.querySelector('#productos-listado-title'); 
+const productosSpan = document.querySelector('.productos-listado__intro');
 
 function formatearPrecio(valor) {
-    return "$" + valor.toLocaleString("es-AR");
+  return "$" + valor.toLocaleString("es-AR");
 }
 
 function crearTarjetaProducto(producto) {
-    const li = document.createElement("li");
-    li.innerHTML = `
+  const li = document.createElement("li");
+  li.innerHTML = `
       <article class="producto-card">
         <a href="producto.html?id=${producto.id}" class="producto-card__link">
           <figure class="producto-card__media">
@@ -34,33 +35,65 @@ function crearTarjetaProducto(producto) {
         </button>
       </article>
     `
-    return li
+  return li
 }
 
 
-const fragmento = document.createDocumentFragment();
+// Simulacion de carga asincronica 
 
-productos.forEach(producto => {
+export function renderizarGrilla(arrayDeProductos) {
+  productosList.innerHTML = "";
+  const fragmento = document.createDocumentFragment();
+
+  arrayDeProductos.forEach(producto => {
     fragmento.appendChild(crearTarjetaProducto(producto));
-});
+  });
+
+  productosList.appendChild(fragmento);
+}
+
+function obtenerProductos() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(productos), 1500);
+  });
+}
+
+async function cargarCatalogo() {
+  try {
+    productosList.innerHTML = '<div class="loader"></div>';
+
+    if (productosH1) productosH1.classList.add('oculto');
+    if (productosSpan) productosSpan.classList.add('oculto');
+
+    const datos = await obtenerProductos();
+
+    if (productosH1) productosH1.classList.remove('oculto');
+    if (productosSpan) productosSpan.classList.remove('oculto');
+
+    renderizarGrilla(datos);
+
+  } catch (error) {
+    console.error("Error:", error);
+    productosList.innerHTML = "<p>Hubo un error al cargar el catálogo.</p>";
+  }
+}
 
 
-productosList.appendChild(fragmento);
+cargarCatalogo();
 
+// Lógica de carrito 
 
-//Logica para carrito
+let counter = 0;
 
-const addButton = document.querySelectorAll('.producto-card__cta')
+inicializarCarrito();
 
-let counter = 0
+function inicializarCarrito() {
+  productosList.addEventListener('click', (evento) => {
+    const boton = evento.target.closest('.producto-card__cta');
+    if (!boton) return;
 
+    counter++;
+    cartCount.textContent = counter;
+  });
+}
 
-addButton.forEach(btn => {
-    btn.addEventListener('click', () => {
-        counter++
-        cartCount.textContent = counter
-
-    })
-})
-
-    

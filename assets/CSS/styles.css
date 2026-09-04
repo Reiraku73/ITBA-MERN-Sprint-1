@@ -849,6 +849,34 @@ main > section {
   color: var(--color-ink-soft);
 }
 
+
+.loader {
+  display: flex;
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: var(--color-oro); 
+  border: 2px solid;
+  position: relative;
+  margin: 0 auto; 
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}
+
+.oculto {
+  display: none !important;
+}
+
 /* ==========================================================================
    Responsive — mobile-first (se agrega complejidad a partir de acá)
    ========================================================================== */
