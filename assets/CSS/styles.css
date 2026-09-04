@@ -881,6 +881,13 @@ main > section {
   flex-shrink: 0;
 }
 
+.cuenta__encabezado-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
 .cuenta__card {
   background: var(--color-paper);
   border: 1px solid var(--color-line);

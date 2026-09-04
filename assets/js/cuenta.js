@@ -7,6 +7,7 @@ if (!currentUser) {
 } else {
     const accountForm = document.getElementById('cuenta-form');
     const editButton = document.getElementById('editar-cuenta');
+    const logoutButton = document.getElementById('cerrar-sesion');
     const cancelButton = document.getElementById('cancelar-edicion');
     const actions = document.getElementById('cuenta-acciones');
     const passwordSection = document.getElementById('cuenta-password');
@@ -42,6 +43,11 @@ if (!currentUser) {
     };
 
     editButton.addEventListener('click', () => setEditing(true));
+
+    logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('session');
+        window.location.href = 'login.html';
+    });
 
     cancelButton.addEventListener('click', () => {
         showUserData();
