@@ -17,6 +17,11 @@ const prefiereMenosMovimiento = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
+// Estado del carrousel, compartido entre las funciones de este módulo.
+let slides = [];
+let indiceActivo = 0;
+let idRotacion = null;
+
 function elegirIndiceInicialAleatorio(cantidadProductos) {
   return Math.floor(Math.random() * cantidadProductos);
 }
@@ -68,6 +73,42 @@ function crearFlechas() {
   return { anterior, siguiente };
 }
 
+// --------------------------------------------------------------------------
+// Control de slides y rotación
+// --------------------------------------------------------------------------
+function mostrarSlide(nuevoIndice) {
+  slides[indiceActivo].classList.remove("hero__carousel-slide--activa");
+  slides[indiceActivo].setAttribute("aria-hidden", "true");
+  slides[indiceActivo].tabIndex = -1;
+
+  indiceActivo = nuevoIndice;
+
+  slides[indiceActivo].classList.add("hero__carousel-slide--activa");
+  slides[indiceActivo].setAttribute("aria-hidden", "false");
+  slides[indiceActivo].tabIndex = 0;
+}
+
+function siguienteSlide() {
+  mostrarSlide((indiceActivo + 1) % slides.length);
+}
+
+function slideAnterior() {
+  mostrarSlide((indiceActivo - 1 + slides.length) % slides.length);
+}
+
+function reiniciarRotacion() {
+  if (prefiereMenosMovimiento) return;
+  clearInterval(idRotacion);
+  idRotacion = setInterval(siguienteSlide, INTERVALO_ROTACION_MS);
+}
+
+function pausarRotacion() {
+  clearInterval(idRotacion);
+}
+
+// --------------------------------------------------------------------------
+// Render inicial
+// --------------------------------------------------------------------------
 async function render() {
   const contenedor = document.getElementById("hero-carousel");
   if (!contenedor) return;
@@ -76,11 +117,11 @@ async function render() {
     const productos = await obtenerProductos();
     if (!productos.length) return;
 
-    let indiceActivo = elegirIndiceInicialAleatorio(productos.length);
+    indiceActivo = elegirIndiceInicialAleatorio(productos.length);
 
     contenedor.innerHTML = "";
 
-    const slides = productos.map((producto, i) =>
+    slides = productos.map((producto, i) =>
       crearSlide(producto, i === indiceActivo)
     );
     slides.forEach((slide) => contenedor.appendChild(slide));
@@ -88,34 +129,6 @@ async function render() {
     const { anterior, siguiente } = crearFlechas();
     contenedor.appendChild(anterior);
     contenedor.appendChild(siguiente);
-
-    function mostrarSlide(nuevoIndice) {
-      slides[indiceActivo].classList.remove("hero__carousel-slide--activa");
-      slides[indiceActivo].setAttribute("aria-hidden", "true");
-      slides[indiceActivo].tabIndex = -1;
-
-      indiceActivo = nuevoIndice;
-
-      slides[indiceActivo].classList.add("hero__carousel-slide--activa");
-      slides[indiceActivo].setAttribute("aria-hidden", "false");
-      slides[indiceActivo].tabIndex = 0;
-    }
-
-    function siguienteSlide() {
-      mostrarSlide((indiceActivo + 1) % slides.length);
-    }
-
-    function slideAnterior() {
-      mostrarSlide((indiceActivo - 1 + slides.length) % slides.length);
-    }
-
-    let idRotacion = null;
-
-    function reiniciarRotacion() {
-      if (prefiereMenosMovimiento) return;
-      clearInterval(idRotacion);
-      idRotacion = setInterval(siguienteSlide, INTERVALO_ROTACION_MS);
-    }
 
     siguiente.addEventListener("click", () => {
       siguienteSlide();
@@ -129,9 +142,9 @@ async function render() {
 
     // Pausamos la rotación automática mientras el usuario interactúa
     // con el carrousel (mouse encima o foco por teclado).
-    contenedor.addEventListener("mouseenter", () => clearInterval(idRotacion));
+    contenedor.addEventListener("mouseenter", pausarRotacion);
     contenedor.addEventListener("mouseleave", reiniciarRotacion);
-    contenedor.addEventListener("focusin", () => clearInterval(idRotacion));
+    contenedor.addEventListener("focusin", pausarRotacion);
     contenedor.addEventListener("focusout", reiniciarRotacion);
 
     reiniciarRotacion();
