@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in | Hermanos Jota</title>
+  <meta name="description" content="Iniciá sesión o creá tu cuenta en Hermanos Jota.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#2E2015">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="./assets/CSS/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header__logo">
+      <a href="index.html" class="header__logo-link">
+        <img
+          src="assets/images/isotipo.png"
+          alt=""
+          width="34"
+          height="41"
+        >
+        <span class="header__wordmark">Hermanos Jota</span>
+      </a>
+    </div>
+
+    <nav class="header__nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="index.html#historia">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <form class="header__search" action="productos.html" method="get">
+      <label for="search-input" class="visually-hidden">Buscar productos</label>
+      <input
+        type="search"
+        id="search-input"
+        name="q"
+        placeholder="Buscar muebles..."
+        autocomplete="off"
+      >
+      <button type="submit">
+        <img src="assets/icons/search.svg" alt="" width="20" height="20">
+      </button>
+    </form>
+
+    <div class="header__actions">
+      <a href="menu.html" class="nav__toggle">
+        <span>☰</span>
+      </a>
+
+      <a href="cuenta.html" class="header__icon-link">
+        <img src="assets/icons/user.svg" alt="" width="24" height="24">
+      </a>
+
+      <a href="carrito.html" class="header__icon-link header__cart">
+        <img src="assets/icons/cart.svg" alt="" width="24" height="24">
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <div id="live-region" class="visually-hidden"></div>
+
+  <main id="main-content">
+    <section class="login-container">
+      <h1 class="login-titulo">Iniciar sesión</h1>
+
+      <form id="login-form" class="login-form">
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Contraseña</label>
+        <input type="password" id="password" required>
+
+        <button type="submit" class="login-boton">
+          Entrar
+        </button>
+      </form>
+
+      <p class="login-extra">
+        ¿No tenés cuenta aún?
+        <a href="register.html">Crear una</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <div class="site-footer__logo">
+          <img
+            src="assets/images/isotipo.png"
+            alt=""
+            width="28"
+            height="34"
+          >
+          <span class="header__wordmark">Hermanos Jota</span>
+        </div>
+        <p>
+          Muebles artesanales en madera, fabricados a mano en nuestro
+          taller desde hace más de 20 años.
+        </p>
+      </div>
+
+      <nav class="site-footer__nav">
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="index.html#historia">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__legal">
+        <h2>Información legal</h2>
+        <ul>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="cambios-devoluciones.html">Cambios y devoluciones</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__contacto">
+        <h2>Contacto</h2>
+        <address>
+          <p>
+            <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a>
+          </p>
+          <p>
+            <a href="https://wa.me/5491145678900">+54 11 4567-8900</a>
+          </p>
+          <p>
+            Av. San Juan 2847, C1232AAB<br>
+            Barrio de San Cristóbal, CABA, Argentina
+          </p>
+          <p class="site-footer__horarios">
+            Lun. a Vie. 10:00–19:00 · Sáb. 10:00–14:00
+          </p>
+        </address>
+
+        <ul class="site-footer__social">
+          <li>
+            <a href="https://instagram.com/hermanosjota_ba" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/instagram.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5491145678900" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/whatsapp.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
