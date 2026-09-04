@@ -104,10 +104,9 @@
       </div>
 
       <div class="hero__media">
-        <div class="hero__media">
-          <!-- Los slides se generaran dinámicamente en hero-carousel.js -->
-           <img src="./assets/images/productos/aparador-uspallata.webp" alt="Imagen de Aparador Uspallata">
-          <div class="hero__carousel-loading"></div>
+        <div class="hero__carousel" id="hero-carousel">
+          <!-- Los slides se generan dinámicamente en hero-carousel.js -->
+          <div class="hero__carousel-loading" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -141,58 +140,12 @@
       <h2>Productos destacados</h2>
 
       <ul class="productos-destacados__grid" id="productos-destacados-grid">
-        <li>
-          <article class="producto-card">
-            <figure class="producto-card__media">
-              <img src="./assets/images/productos/aparador-uspallata.webp" alt="Aparador Uspallata" loading="lazy">
-            </figure>
-            <div class="producto-card__info">
-              <h3>Aparador Uspallata</h3>
-              <p class="producto-card__price">$350.000</p>
-            </div>
-            <button class="btn btn--secondary producto-card__cta">Ver producto</button>
-          </article>
-        </li>
-        
-        <li>
-          <article class="producto-card">
-            <figure class="producto-card__media">
-              <img src="./assets/images/productos/biblioteca-recoleta.webp" alt="Biblioteca Recoleta" loading="lazy">
-            </figure>
-            <div class="producto-card__info">
-              <h3>Biblioteca Recoleta</h3>
-              <p class="producto-card__price">$420.000</p>
-            </div>
-            <button class="btn btn--secondary producto-card__cta">Ver producto</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="producto-card">
-            <figure class="producto-card__media">
-              <img src="./assets/images/productos/butaca-mendoza.webp" alt="Butaca Mendoza" loading="lazy">
-            </figure>
-            <div class="producto-card__info">
-              <h3>Butaca Mendoza</h3>
-              <p class="producto-card__price">$280.000</p>
-            </div>
-            <button class="btn btn--secondary producto-card__cta">Ver producto</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="producto-card">
-            <figure class="producto-card__media">
-              <img src="./assets/images/productos/escritorio-costa.webp" alt="Escritorio Costa" loading="lazy">
-            </figure>
-            <div class="producto-card__info">
-              <h3>Escritorio Costa</h3>
-              <p class="producto-card__price">$310.000</p>
-            </div>
-            <button class="btn btn--secondary producto-card__cta">Ver producto</button>
-          </article>
-        </li>
-      </ul> 
+        <!-- Las tarjetas se generan dinámicamente en home-destacados.js -->
+        <li class="skeleton-card" aria-hidden="true"></li>
+        <li class="skeleton-card" aria-hidden="true"></li>
+        <li class="skeleton-card" aria-hidden="true"></li>
+        <li class="skeleton-card" aria-hidden="true"></li>
+      </ul>
 
       <a href="productos.html" class="btn btn--primary productos-destacados__ver-todo">
         Ver todos los productos
@@ -495,5 +448,9 @@
       <p>&copy; <span id="footer-year">2026</span> Hermanos Jota. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/home-destacados.js"></script>
+  <script type="module" src="assets/js/hero-carousel.js"></script>
 </body>
 </html>
