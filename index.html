@@ -168,6 +168,12 @@
         </a>
       </div>
 
+      <div class="hero__media">
+        <div class="hero__carousel" id="hero-carousel">
+          <!-- Los slides se generan dinámicamente en hero-carousel.js -->
+          <div class="hero__carousel-loading" aria-hidden="true"></div>
+        </div>
+      </div>
       <figure class="hero__media">
         <img
           src="assets/images/productos/sillon-copacabana.webp"
@@ -207,110 +213,15 @@
       </figure>
     </section>
 
-    <!--
-      Productos destacados.
-      En esta etapa (solo HTML + CSS) las 4 tarjetas están escritas
-      directo acá abajo. Cuando conectemos JavaScript, esta lista se
-      va a generar dinámicamente a partir de un array de objetos
-      (ver /assets/js/home-destacados.js en la versión con JS) — pero
-      la estructura de cada tarjeta (figure > img, h3, p del precio,
-      botón) se mantiene idéntica, así el CSS no cambia.
-    -->
-    <section class="productos-destacados" aria-labelledby="productos-destacados-title">
-      <h2 id="productos-destacados-title">Productos destacados</h2>
+    <section class="productos-destacados">
+      <h2>Productos destacados</h2>
 
-      <ul class="productos-destacados__grid">
-        <li>
-          <article class="producto-card">
-            <a href="producto.html" class="producto-card__link">
-              <figure class="producto-card__media">
-                <img
-                  src="assets/images/productos/sillon-copacabana.webp"
-                  alt="Sillón Copacabana, sillón lounge de cuero y madera"
-                  width="600"
-                  height="600"
-                  loading="lazy"
-                >
-              </figure>
-              <div class="producto-card__info">
-                <h3>Sillón Copacabana</h3>
-                <p class="producto-card__price">$185.000</p>
-              </div>
-            </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" aria-label="Agregar Sillón Copacabana al carrito">
-              Agregar al carrito
-            </button>
-          </article>
-        </li>
-
-        <li>
-          <article class="producto-card">
-            <a href="producto.html" class="producto-card__link">
-              <figure class="producto-card__media">
-                <img
-                  src="assets/images/productos/mesa-de-centro-araucaria.webp"
-                  alt="Mesa de Centro Araucaria, mesa ratona de mármol y nogal"
-                  width="600"
-                  height="600"
-                  loading="lazy"
-                >
-              </figure>
-              <div class="producto-card__info">
-                <h3>Mesa de Centro Araucaria</h3>
-                <p class="producto-card__price">$92.500</p>
-              </div>
-            </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" aria-label="Agregar Mesa de Centro Araucaria al carrito">
-              Agregar al carrito
-            </button>
-          </article>
-        </li>
-
-        <li>
-          <article class="producto-card">
-            <a href="producto.html" class="producto-card__link">
-              <figure class="producto-card__media">
-                <img
-                  src="assets/images/productos/escritorio-costa.webp"
-                  alt="Escritorio Costa, escritorio compacto de bambú laminado"
-                  width="600"
-                  height="600"
-                  loading="lazy"
-                >
-              </figure>
-              <div class="producto-card__info">
-                <h3>Escritorio Costa</h3>
-                <p class="producto-card__price">$140.000</p>
-              </div>
-            </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" aria-label="Agregar Escritorio Costa al carrito">
-              Agregar al carrito
-            </button>
-          </article>
-        </li>
-
-        <li>
-          <article class="producto-card">
-            <a href="producto.html" class="producto-card__link">
-              <figure class="producto-card__media">
-                <img
-                  src="assets/images/productos/sofa-patagonia.webp"
-                  alt="Sofá Patagonia, sofá de tres cuerpos tapizado en lino"
-                  width="600"
-                  height="600"
-                  loading="lazy"
-                >
-              </figure>
-              <div class="producto-card__info">
-                <h3>Sofá Patagonia</h3>
-                <p class="producto-card__price">$310.000</p>
-              </div>
-            </a>
-            <button type="button" class="btn btn--secondary producto-card__cta" aria-label="Agregar Sofá Patagonia al carrito">
-              Agregar al carrito
-            </button>
-          </article>
-        </li>
+      <ul class="productos-destacados__grid" id="productos-destacados-grid">
+        <!-- Las tarjetas se generan dinámicamente en home-destacados.js -->
+        <li class="skeleton-card" aria-hidden="true"></li>
+        <li class="skeleton-card" aria-hidden="true"></li>
+        <li class="skeleton-card" aria-hidden="true"></li>
+        <li class="skeleton-card" aria-hidden="true"></li>
       </ul>
 
       <a href="productos.html" class="btn btn--primary productos-destacados__ver-todo">
@@ -623,10 +534,8 @@
     </div>
   </footer>
 
-  <!--
-    JavaScript: todavía no está conectado en esta etapa del proyecto.
-    En el próximo sprint se suma acá la lógica de menú mobile, carrito
-    y validación de formularios (ver /assets/js/ en la versión con JS).
-  -->
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/home-destacados.js"></script>
+  <script type="module" src="assets/js/hero-carousel.js"></script>
 </body>
 </html>
