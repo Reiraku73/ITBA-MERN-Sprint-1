@@ -828,6 +828,17 @@ main > section {
   font-size: 1rem;
 }
 
+.login-form__error {
+  min-height: 1.1rem;
+  margin: -1.5rem 0 0;
+  color: #B3413B;
+  font-size: 0.8rem;
+}
+
+.login-form input.login-form__input--invalido {
+  border-color: #B3413B;
+}
+
 .login-form input:focus {
   outline: none;
   border-color: var(--color-siena);
