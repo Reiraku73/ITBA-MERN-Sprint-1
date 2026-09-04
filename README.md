@@ -14,7 +14,7 @@ Sitio de e-commerce para una mueblería artesanal, construido únicamente con te
 | Sacca Jurado Maximo Julian | [@maximosacca](https://github.com/maximosacca) |
 | Martin de Achaval | [@martindeachaval](https://github.com/martindeachaval) |
 | Tomás Zambrano | [@tommyrk](https://github.com/tommyrk) |
-| Nombre Apellido | [@usuario](https://github.com/usuario) |
+| Franco Lugo | [@RoBeeBot](https://github.com/robeebot) |
 
 ---
 
